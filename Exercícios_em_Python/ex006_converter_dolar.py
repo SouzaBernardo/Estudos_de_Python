@@ -1,5 +1,8 @@
 # Converter real para dolar
+
 # Valor do dolar -> 5,44
+
+# Pedir valor em R$
 print('Vamos converter seu dinheiro?')
 din_real = float(input('Quanto queres converter para dolar? R$'))
 
