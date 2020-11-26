@@ -23,7 +23,8 @@ valor = float(valor)
 desconto = float(desconto)
 aplicar_desconto = valor * desconto / 100 # aplicar o desconto
 
+
 # Dizer o resultado do desconto
 
-print(f'Seu produto de R${valor} com desconto de {desconto}')
-print(f'Ficou R${aplicar_desconto}')
+print(f'Seu produto de R${valor} com desconto de {desconto}%.')
+print(f'Ficou R${aplicar_desconto}.')
