@@ -9,3 +9,17 @@ if salario.count('REAIS'):
 if salario.count('R$'):
     salario = salario.replace('R$', '')
 # Desconsiderar % e PORCENTO
+if aumento.count('PORCENTO'):
+    aumento = aumento.replace('PORCENTO', '')
+if aumento.count('%'):
+    aumento = aumento.replace('%', '')
+# Tornar variáveis em float
+salario = float(salario)
+aumento = float(aumento)
+# Calcular a porcentagem do aumento
+calcular_aumento = salario * aumento / 100
+# Dar resultado
+print(f'Antigamente seu salário era R${salario}')
+print(f'E, você recebeu um aumento de {aumento}%')
+print(f'O aumento do seu salário ficou {calcular_aumento}')
+print('__FIM__')
