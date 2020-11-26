@@ -18,8 +18,9 @@ salario = float(salario)
 aumento = float(aumento)
 # Calcular a porcentagem do aumento
 calcular_aumento = salario * aumento / 100
+juntar_aumento_salario = calcular_aumento + salario
 # Dar resultado
 print(f'Antigamente seu salário era R${salario}')
 print(f'E, você recebeu um aumento de {aumento}%')
-print(f'O aumento do seu salário ficou {calcular_aumento}')
+print(f'O aumento do seu salário ficou {juntar_aumento_salario}')
 print('__FIM__')
