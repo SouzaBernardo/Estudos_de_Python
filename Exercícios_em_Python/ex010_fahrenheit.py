@@ -1,23 +1,15 @@
 # Transformar grau Celsius para Grau Fahrenheit
 
 # Pedir temp. em °C
-grau_fah = str(input('Informe a temperatura em °C:')).upper().strip()
+grau_cel = str(input('Informe a temperatura em Grau Celsius:')).strip()
 
-# Ignorar '°C' ou 'Grau' ou 'Celsius' ou 'Celsios'
+# Pegar primeiro número, ignorando coisas como GRAUS
+lista = grau_cel.split() # Cria um array com o número e seus complementos
+so_numero = lista[0] # Pega somente o número
+so_numero = float(so_numero) # Transforma o número em Float
 
-if grau_fah.count('°C'):
-    # Substiui °C por '' -> espaço vazio
-    grau_fah = grau_fah.replace('°C', '')
+# Aplicar calculos para converter
+grau_fah = 9 * so_numero / 5 + 32 # Fahrenheit
+kelvin = so_numero + 273.15 # Kelvin
 
-if grau_fah.count('GRAU CELSIUS'):
-    # Substiui Grau Celsius por '' -> espaço vazio
-    grau_fah = grau_fah.replace('GRAU CELSIUS', '')
-
-if grau_fah.count('GRAUS CELSIUS'):
-    # Substitui Graus
-    grau_fah = grau_fah.replace('')
-if grau_fah.count('GRAUS'):
-    grau_fah = grau_fah.replace('')
-if grau_fah.count('GRAUS CELSIOS'):
-    grau_fah = grau_fah.replace('')
-print(grau_fah)
+print(grau_cel, lista, so_numero, grau_fah, kelvin)
