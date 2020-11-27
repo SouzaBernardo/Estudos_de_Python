@@ -12,4 +12,9 @@ so_numero = float(so_numero) # Transforma o número em Float
 grau_fah = 9 * so_numero / 5 + 32 # Fahrenheit
 kelvin = so_numero + 273.15 # Kelvin
 
-print(grau_cel, lista, so_numero, grau_fah, kelvin)
+# Resultado...
+print(f'A temperatura em Grau Celsius é {so_numero} °C')
+print('CONVERTENDO...')
+print(f'Temperatura convertida para Grau Fahrenheit: {grau_fah}')
+print(f'Temperatura convertida para Kelvin: {kelvin}K')
+print('__FIM__')
