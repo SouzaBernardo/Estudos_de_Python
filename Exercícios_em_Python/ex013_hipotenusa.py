@@ -1,7 +1,11 @@
-# Calcular a hipotenusa
+# Calculadora de hipotenusa
 from math import hypot
-cA = float(input('Cateto adjacente:'))
-cO = float(input('Cateto oposto:'))
-#H = (cA ** 2 + cO ** 2) ** (1/2)
-H = hypot(cA, cO) #metodo math
-print('A hipotenusa, do cateto oposto de valor {} e cateto adjacente de valor {}, é: {:.2f}'.format(cO, cA, H))
+
+# Pedir os catetos
+cateto_ad = float(input('Cateto adjacente:')) # Cateto Adjacente
+cateto_op = float(input('Cateto oposto:')) # Cateto oposto
+hipo = hypot(cateto_ad, cateto_op) # Calcular a hipotenusa
+
+# Resultado
+print(f'A hipotenusa, do cateto oposto de valor {cateto_op} e cateto adjacente de valor {cateto_ad}, é: {hipo :.2f}')
+print('__FIM__')
