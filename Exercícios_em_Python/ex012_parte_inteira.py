@@ -1,3 +1,5 @@
 # Parte inteira de um número
-num = float(input('Digite um número:'))
-print('O número {} tem parte inteira {}'.format(num, int(num)))
+numero = float(input('Digite um número:'))# Pedir número
+numero_inteiro = int(numero)# Mudar para INTERIO
+print(f'O número {numero} tem parte inteira {numero_inteiro}.')
+print('__FIM__')
