@@ -1,6 +1,6 @@
 # Aluguel de carro
 
-import math
+from math import ceil
 
 dias_alugados = str(input('Quantos dias foram alugados?')).lower().strip() # Pedir dias
 print('(Caso tenha usado metade de um dia, o valor será arredondado!)') # Informação, arredondar
@@ -29,7 +29,7 @@ dias_alugados = float(dias_alugados)
 km_rodados = float(km_rodados)
 
 # Arredondar dias
-dias_alugados = math.ceil(dias_alugados)
+dias_alugados = ceil(dias_alugados)
 
 # Calcular o preço do aluguel
 preco_aluguel = (dias_alugados * 60) + (km_rodados * 0.15)
