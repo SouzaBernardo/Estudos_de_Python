@@ -1,9 +1,18 @@
 # Pedir o angulo e dizer qual é o seno, conseno e tangente
 from math import radians, sin, cos, tan
-an = float(input('angulo que você deseja:'))
-seno = sin(radians(an))
-print('O seno é {}.'.format(seno))
-cosseno = cos(radians(an))
-print('O cosseno é {}.'.format(cosseno))
-tangente = tan(radians(an))
-print('A tangente é {}.'.format(tangente))
+
+# Pedi o angulo
+angulo = float(input('Angulo que você deseja:'))
+
+# Cacular os resultados
+seno = sin(radians(angulo))
+cosseno = cos(radians(angulo))
+tangente = tan(radians(angulo))
+
+# Dar os resultados
+print(f'O seno é {seno}.')
+print(f'O cosseno é {cosseno}.')
+print(f'A tangente é {tangente}.')
+
+# Fim do programa
+print('__FIM__')
