@@ -1,4 +1,5 @@
 # Dizer o aumento do salário
+
 # Pedir salário
 salario = str(input('Olá, qual seu salário atual?')).upper().strip()
 # Pedir a porcentagem de aumento
