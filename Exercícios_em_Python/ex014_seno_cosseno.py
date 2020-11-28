@@ -1,0 +1,1 @@
+# Pedir o angulo e dizer qual é o seno, conseno e tangente

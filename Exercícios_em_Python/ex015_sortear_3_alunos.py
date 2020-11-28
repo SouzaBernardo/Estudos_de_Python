@@ -1,0 +1,1 @@
+# Pedir 3 nomes de alunos / grupos e sortear um deles
