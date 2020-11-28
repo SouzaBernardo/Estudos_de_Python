@@ -4,7 +4,7 @@ from math import ceil
 
 dias_alugados = str(input('Quantos dias foram alugados?')).lower().strip() # Pedir dias
 print('(Caso tenha usado metade de um dia, o valor será arredondado!)') # Informação, arredondar
-km_rodados = str(input('Quantons quilômetros foram rodados?')).lower().strip() # Pedir Km
+km_rodados = str(input('Quantos quilômetros foram rodados?')).lower().strip() # Pedir Km
 
 # Desconsiderar dados adicionais, considerar somente os números
 if dias_alugados.count('dias') or dias_alugados.count('dia'):
