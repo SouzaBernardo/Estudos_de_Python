@@ -1,0 +1,1 @@
+# Parte inteira de um número
