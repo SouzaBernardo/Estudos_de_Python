@@ -1,1 +1,0 @@
-# Pedir o nome da pessoa, e analisa-lo
