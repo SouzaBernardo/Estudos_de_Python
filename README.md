@@ -1,2 +1,2 @@
-# Exercícios de Python
- Repositório para dividir meus conhecimentos em Python
+# Estudos de Python
+ Repositório para dividir meus conhecimentos em **PYTHON**
