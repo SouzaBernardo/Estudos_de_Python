@@ -1,5 +1,7 @@
 # Jogo de Adivinha
 from random import randint 
+from colorama import init
+init()
 
 # Número entre 0 e 5
 num = randint(0, 5)
@@ -10,9 +12,9 @@ pergunta = int(input(('Sabe qual é?')))
 
 # Condições
 if pergunta == num:
-    print('Acertou!!!') # Se acertar o número
+    print('\033[32mAcertou!!!') # Se acertar o número
 else:
-    print('Errou!!! Tente novamente...') # Se errar o número
+    print('\033[31mErrou!!!\033[m Tente novamente...') # Se errar o número
 
 # Resultado
 print(f'O número era {num}')

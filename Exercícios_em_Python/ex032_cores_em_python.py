@@ -3,11 +3,14 @@ import colorama
 colorama.init()
 
 nome = 'Bernardo'
-cores = {'Limpa':'\033[0;30m',
-        'azul':'\033[34m',
-        'amarelo':'\033[33m'} # Dicionário
+a = 3
+b = 5
+cores = {
+    'limpa':'\033[m',
+    'azul':'\033[34m',
+    'amarelo':'\033[33m',
+    'preto_branco':'\033[7;30m'}
 
-print(f'Olá, \033[4;32m{nome}\033[m')
-print('{}, {},'.format(cores['azul'], cores['amarelo']))
-print(f'{cores["azul"]}, {cores["amarelo"]}')
-
+print(f'Olá!{cores["azul"]}{nome}')
+print(f'Os valores são \033[32m{a}\033[m e \033[34m{b}\033[m')
+print('\033[31m Olá, mundo ')
