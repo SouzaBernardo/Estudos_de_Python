@@ -1,6 +1,7 @@
 # Usar Cores no Python
 import colorama
 colorama.init()
+
 '''Tipos de cor:
     0 → Sem style
     1 → Negrito**
