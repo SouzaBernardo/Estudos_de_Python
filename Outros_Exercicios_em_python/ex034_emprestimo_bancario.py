@@ -7,7 +7,7 @@ valor_da_casa = str(input('Valor da casa que dejesa comprar: R$')).lower().strip
 valor_do_salario = str(input('valor do seu salário: R$')).lower().strip()
 anos_a_pagar = str(input('Em quantos anos quer pagar a casa? ')).lower().strip()
 
-# Indicar erro se usar virgula ao invés de ponto
+# 
 if valor_da_casa.count(',') or valor_do_salario.count(','):
     print('\033[31m ERRO!')
     print('Você usou virgula! ao invés disso, use ponto.')
