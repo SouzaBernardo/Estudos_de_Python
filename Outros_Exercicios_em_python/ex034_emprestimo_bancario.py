@@ -12,9 +12,11 @@ if valor_da_casa.count(',') or valor_do_salario.count(','):
     print('\033[31m ERRO!')
     print('Você usou virgula! ao invés disso, use ponto.')
 elif valor_da_casa.count('.') or valor_do_salario.count('.'):
-    # Converter valores para números
+# Converter valores para números
     valor_da_casa = float(valor_da_casa)
     valor_do_salario = float(valor_do_salario)
+# Calcular
+    print(valor_da_casa * valor_do_salario)
 elif anos_a_pagar.count('.'):
     anos_a_pagar = float(anos_a_pagar)
 else: 
