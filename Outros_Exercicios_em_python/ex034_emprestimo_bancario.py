@@ -1,50 +1,58 @@
 # Aprovar um empréstimo bancário
+
 from colorama import init
 init()
 
 # Adquirir informações
-valor_da_casa = str(input('Valor da casa que dejesa comprar: R$')).lower().strip()
-valor_do_salario = str(input('valor do seu salário: R$')).lower().strip()
-anos_a_pagar = str(input('Em quantos anos quer pagar a casa? ')).lower().strip()
+valor_da_casa = str(input('Valor da casa que dejesa comprar: R$'))
+valor_do_salario = str(input('valor do seu salário: R$'))
+anos_a_pagar = str(input('Em quantos anos quer pagar a casa? '))
 
-# Converter para numero, int ou float
-
+# condições
 if valor_da_casa.count(',') or valor_do_salario.count(',') or anos_a_pagar.count(','):
-    # ERRO
-    print('\033[31mERRO!')
-    print('\033[31mNÃO USE VIRGULA\033[m, MAS SIM \033[31mPONTO!\033[m.')
-
-elif valor_do_salario.count('.') or valor_da_casa.count('.') or anos_a_pagar.count('.'):
-    # Caso tenha .
-    if valor_do_salario.count('.') and valor_da_casa.count('.') and anos_a_pagar.count('.'):
-        valor_da_casa = float(valor_da_casa)
-        valor_do_salario = float(valor_do_salario)
-        anos_a_pagar = float(anos_a_pagar)        
-    elif valor_do_salario.count('.') and valor_da_casa.count('.'):
-        valor_da_casa = float(valor_da_casa)
-        valor_do_salario = float(valor_do_salario)
-        anos_a_pagar = int(anos_a_pagar)
-    elif valor_do_salario.count('.') and anos_a_pagar.count('.'):
-        valor_da_casa = int(valor_da_casa)
-        valor_do_salario = float(valor_do_salario)
-        anos_a_pagar = float(anos_a_pagar)
-    else:
-        valor_da_casa = float(valor_da_casa)
-        valor_do_salario = int(valor_do_salario)
-        anos_a_pagar = float(anos_a_pagar)      
+    # Indicar erro se houver virgula
+    print('\033[31mERRO!\033[m.')
+    print('Você musou \033[31mvirgula\033[m. Tente usar \033[31mPonto\033[m!')
+elif anos_a_pagar.count('.'):
+    # Indicar erro se tiver ano quebrado
+    print('\033[31mERRO!\033[m.')
+    print('Você usou \033[31m"."\033[m na \033[31m3° opção\033[m.')
+    print('Use \033[31mnúmeros inteiros nessa opção\033[m.')
+    print('Tente novamente!') # tente novamente 
+elif valor_da_casa.count('.') and valor_do_salario.count('.'):
+    # Caso a casa e o salario tenha '.'
+    valor_da_casa = float(valor_da_casa)
+    valor_do_salario = float(valor_do_salario)
+    anos_a_pagar = int(anos_a_pagar)
+elif valor_da_casa.count('.'):
+    # Caso só a casa tenha ponto
+    valor_da_casa = float(valor_da_casa)
+    valor_do_salario = int(valor_do_salario)
+    anos_a_pagar = int(anos_a_pagar)
+elif valor_do_salario.count('.'):
+    # Caso o salário tenha ponto
+    valor_da_casa = int(valor_da_casa)
+    valor_do_salario = float(valor_do_salario)
+    anos_a_pagar = int(anos_a_pagar)
 else:
+    # Caso nada tenha ponto, transformar para int
     valor_da_casa = int(valor_da_casa)
     valor_do_salario = int(valor_do_salario)
     anos_a_pagar = int(anos_a_pagar)
 
-# Calcular
-valor_por_mes_casa = anos_a_pagar * 12 # Quantos meses vai pagar
+# Calcular o resultado
+meses_do_ano = anos_a_pagar * 12 # Quantos meses vai pagar
+prestacao = valor_da_casa / meses_do_ano
 porcentagem_do_salario = (valor_do_salario * 30) / 100 # Porcentagem
 
-# Ver se pode ou não comprar a casa
-if valor_por_mes_casa >= porcentagem_do_salario:
-    print('Você \033[31mnão pode comprar\033[m a casa, \033[31multrapassou os 30%\033[m.')
+# Analisar se o emprestimo será liberado
+if prestacao >= porcentagem_do_salario:
+    # Não será liberado
+    print('O emprestimo \033[31mfoi negado\033[m.') # Será liberada
+    print('O valor da casa \033[31multrapassou os 30%\033[m do seu salário.')
 else:
-    print('\033[32m TUDO CERTO.\033[m')
-    print('Você pode comprar a casa!')
-    print(f'O valor dela é \033[32m R${valor_da_casa}\033[m e você vai paragar em \033[32m {valor_por_mes_casa} meses\033[m.')
+    # Será liberada
+    print('\033[32m TUDO CERTO.\033[m') 
+    print('Emprestimo \033[32mAceito\033[m')
+    print(f'O valor da casa é \033[32mR${valor_da_casa}\033[m.')
+    print(f'Você vai paragar em \033[32m{prestacao:.2f} meses\033[m.')
