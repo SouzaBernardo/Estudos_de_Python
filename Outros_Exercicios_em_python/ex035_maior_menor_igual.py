@@ -10,9 +10,10 @@ maior = pri_num
 # Verificar que é maior
 if seg_num < pri_num: # Verificar se 
     menor = seg_num
-elif seg_num == pri_num:
+elif seg_num == pri_num: # Verificar se são iguais
     print('Os números são iquais')
 else:
-    maior = seg_num
+    maior = seg_num # Verificar se o segundo é maior
+# Resposta
 print(f'O número maior é {maior} e o menor é {menor}.')
 print('__FIM__')
