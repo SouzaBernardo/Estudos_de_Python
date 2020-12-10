@@ -1,0 +1,1 @@
+# Verificar se as retas formam um triangulo, se sim, qual?
