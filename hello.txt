@@ -1,0 +1,2 @@
+Olá, este repositório é destinado para meus exercícios de programação na linguagem PYTHON.
+Assim, posso dividir um pouco do que sei.
