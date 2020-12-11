@@ -48,5 +48,5 @@ if triangulo == True:
         print('Este é um triangulo escaleno')
 else:
     # Caso não possa formar um triangulo
-    print('NÃO forma um triangilo')
+    print('NÃO forma um triangulo')
 print('__FIM__')
