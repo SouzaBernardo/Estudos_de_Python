@@ -1,13 +1,16 @@
 # Verificar se as retas formam um triangulo, se sim, qual?
 print('Vamos analisar 3 retas? preciso saber a medida delas!')
+
 # Pegar as medidas
 pri_reta = input('Medida da primeira reta:').strip().split()
 seg_reta = input('Medida da segunda reta:').strip().split()
 ter_reta = input('Medida da terceira reta:').strip().split()
+
 # Transformar as medidas para FLOAT
 pri_reta = float(pri_reta[0])
 seg_reta = float(seg_reta[0])
 ter_reta = float(ter_reta[0])
+
 # Saber qual é o MENOR:
 if seg_reta < pri_reta and seg_reta < ter_reta:
     menor = seg_reta
@@ -29,24 +32,19 @@ elif ter_reta > menor and ter_reta < maior:
     media = ter_reta
 else:
     media = pri_reta
+
 # Verificar se FAZEM UM TRIANGULO:
 if menor + media > maior:
-    triangulo = True
-else:
-    triangulo = False
-# Var para identificar
-'''equilatero = pri_reta == seg_reta and pri_reta == ter_reta
-isoceles = pri_reta == seg_reta and pri_reta != ter_reta or pri_reta != seg_reta and pri_reta == ter_reta'''
-# Verificar o TIPO de TRIANGULO:
-if triangulo == True:
-    # Para um equilatero
-    if pri_reta == seg_reta and pri_reta == ter_reta:
+    # Definir equilatero(=TUDO IGUAL=) e escaleno(!TUDO DIFERENTE=)
+    equilatero = pri_reta == seg_reta and pri_reta == ter_reta
+    escaleno = pri_reta != seg_reta and pri_reta != ter_reta and seg_reta != ter_reta
+    # Verificar o TIPO de TRIANGULO:
+    if equilatero == True: # Para um equilatero
         print('Este triangulo é um equilatero')
-    elif pri_reta == seg_reta and pri_reta != ter_reta or pri_reta != seg_reta and pri_reta == ter_reta:
-        print('Este é um triangulo isoceles')
-    else: # Para o escaleno
+    elif escaleno == True: # Para um escaleno
         print('Este é um triangulo escaleno')
-else:
-    # Caso não possa formar um triangulo
+    else: # Para o isoceles
+        print('Este é um triangulo isoceles')
+else: # Caso não possa formar um triangulo
     print('NÃO forma um triangulo')
 print('__FIM__')
