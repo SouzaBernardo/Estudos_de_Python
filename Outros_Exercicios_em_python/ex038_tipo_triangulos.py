@@ -34,12 +34,19 @@ if menor + media > maior:
     triangulo = True
 else:
     triangulo = False
+# Var para identificar
+'''equilatero = pri_reta == seg_reta and pri_reta == ter_reta
+isoceles = pri_reta == seg_reta and pri_reta != ter_reta or pri_reta != seg_reta and pri_reta == ter_reta'''
 # Verificar o TIPO de TRIANGULO:
 if triangulo == True:
     # Para um equilatero
     if pri_reta == seg_reta and pri_reta == ter_reta:
         print('Este triangulo é um equilatero')
-    elif pri_reta != seg_reta or pri_reta != ter_reta:
+    elif pri_reta == seg_reta and pri_reta != ter_reta or pri_reta != seg_reta and pri_reta == ter_reta:
         print('Este é um triangulo isoceles')
-
+    else: # Para o escaleno
+        print('Este é um triangulo escaleno')
+else:
+    # Caso não possa formar um triangulo
+    print('NÃO forma um triangilo')
 print('__FIM__')
