@@ -10,7 +10,6 @@ ter_reta = input('Medida da terceira reta:').strip().split()
 pri_reta = float(pri_reta[0])
 seg_reta = float(seg_reta[0])
 ter_reta = float(ter_reta[0])
-
 # Analisar se formam um triangulo
 
 # Saber qual é o menor:
@@ -20,7 +19,6 @@ elif ter_reta < pri_reta and ter_reta < seg_reta:
     menor = ter_reta
 else:
     menor = pri_reta
-
 # Saber quem é o maior:
 if seg_reta > pri_reta and seg_reta > ter_reta:
     maior = seg_reta # Maior é a reta 2
@@ -28,7 +26,6 @@ elif ter_reta > pri_reta and ter_reta > seg_reta:
     maior = ter_reta # Maior é a reta 3
 else:
     maior = pri_reta
-
 # Saber quem é o mediano:
 if seg_reta > menor and seg_reta < maior:
     media = seg_reta
@@ -36,4 +33,14 @@ elif ter_reta > menor and ter_reta < maior:
     media = ter_reta
 else:
     media = pri_reta
+# Verificar se fazem um triangulo:
+if menor + media > maior:
+    triangulo = True
+else:
+    triangulo = False
+# Verificar o tipo de triangulo
+if triangulo == True:
+    # Para um equilatero
+    if menor == media and menor == maior:
+        print('Este triangulo é um equilatero')
 print(ter_reta, seg_reta, pri_reta)
