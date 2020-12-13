@@ -10,9 +10,11 @@ peso_kg = str(input('Preciso saber seu peso, em Quilogramas: ').strip().split())
 alt_metros = str(input('Agora, preciso saber sua altura, em metros: ').strip().split())
 # Verificar se podemos transformar para números
 if peso_kg.count(',') or alt_metros.count(','):
-    print('ERRO, você usou virgula. Substitu-a por ponto!')
+    print('ERRO, você usou virgula. Substitu-a por ponto!') # informar que deve ter Ponto
 else:
+    # Transform to Float
     peso_kg = float(peso_kg[0])
     alt_metros = float(alt_metros[0])
-
-print(peso_kg, alt_metros)
+    # Calcula IMC
+    imc_pessoa = peso_kg / (alt_metros**2)
+    # Falta verificar na tabela
