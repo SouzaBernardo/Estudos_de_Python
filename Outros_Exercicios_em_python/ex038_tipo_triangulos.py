@@ -47,4 +47,5 @@ if menor + media > maior:
         print('Este é um triangulo isoceles')
 else: # Caso não possa formar um triangulo
     print('NÃO forma um triangulo')
+# Fim
 print('__FIM__')

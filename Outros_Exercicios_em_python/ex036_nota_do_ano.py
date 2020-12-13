@@ -4,14 +4,11 @@ init()
 # Inicio
 print('\033[32mBOLETIM:\033[m')
 print('Para saber se você passou, preciso das suas notas do 1° e 2° semestre...')
-
 # Perguntar as notas
 pri_sem = float(input('Primeiro semestre:'))
 seg_sem = float(input('Segundo semestre:'))
-
 # Calcula a média
 med_ano = (pri_sem + seg_sem) / 2
-
 # Identificar se passou de ano
 if med_ano <= 5:
     # Se o jovem ficou de recuperação
