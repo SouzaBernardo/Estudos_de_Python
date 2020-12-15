@@ -5,7 +5,7 @@ valor_produto = input('Valor do produto: R$')
 # Adiquirir a forma de pagamento
 print('Formas de pagamento:')
 print('[1] - à vista dinheiro/cheque: 10% de desconto')
-print('[2] - à vista dinheiro/cheque: 10% de desconto')
+print('[2] - à vista Cartão: 5% de desconto')
 print('[3] - 3x ou mais no cartão: 20% de juros')
 # Resposta
 forma_pagamento = int(input('Qual a forma de pagamento (somente o número)?'))
