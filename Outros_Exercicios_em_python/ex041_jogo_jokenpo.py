@@ -23,8 +23,13 @@ print(escolha_computador, escolha_jogador)
 escolhas_dos_dois = [escolha_computador, escolha_jogador]
 
 # Definir ganhador
-if escolhas_dos_dois == ['Pedra', 'Papel']:
-    print('Papel ganhou!')
-    print('Quem ganhou foi o PC!')
-elif escolhas_dos_dois == ['Pedra', 'Tesoura']:
-    print('Pedra ganhou!')
+if escolha_jogador != escolha_computador:
+    if escolhas_dos_dois == ['Pedra', 'Papel']:
+        print('Papel ganhou!')
+        print('Quem ganhou foi o PC!')
+    elif escolhas_dos_dois == ['Pedra', 'Tesoura']:
+        print('Pedra ganhou!')
+    else:
+        print()
+else:
+    print('Empate')
