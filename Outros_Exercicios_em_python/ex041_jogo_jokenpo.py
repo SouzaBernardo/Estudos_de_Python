@@ -2,8 +2,7 @@
 from random import choice
 
 from colorama import init
-
-init()
+init() # Colors
 
 # Opção do computador, assim ele vai escolher qual vai jogar
 
