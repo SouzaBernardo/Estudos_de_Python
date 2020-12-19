@@ -13,51 +13,42 @@ computador = randint(0, 2) # escolhe de 0 a 2 para dentro das opções
 
 print('O computador já fez sua escolha, só falta você!')
 print('Opções:')
-print('[0] - Pedra')
-print('[1] - Papel')
-print('[2] - Tesoura')
+print('[1]- \033[1;44mPedra\033[m ')
+print('[2] - \033[1;45mPapel\033[m')
+print('[3] - \033[1;46mTesoura\033[m')
 
 jogador = int(input('Qual a sua jogada? '))
 
 sleep(1)
-print('Pedra')
+print('\033[1;44m Pedra \033[m')
 sleep(1)
-print('Papel')
+print('\033[1;45m Papel \033[m')
 sleep(1)
-print('Tesoura')
-sleep(2)
+print('\033[1;46m Tesoura \033[m')
+sleep(1)
 
 print('-=' * 11)
 print(f'Computador jogou {opcoes[computador]}')
-print(f'Jogador jogou {opcoes[jogador]}') # pega na lista de opções as alternativas
+print(f'Jogador jogou {opcoes[jogador - 1]}') # pega na lista de opções as alternativas
 print('-=' * 11)
 
 # Resultado
-if computador == 0: # Pedra 
-    if jogador == 0: # Pedra
-        print('Empate!')
-    elif jogador == 1: # Papel
-        print('Jogador ganhou')
-    elif jogador == 2: # Tesoura
-        print('Computador Ganhou')
-    else:
-        print('Jogada inválida')
-elif computador == 1: # Papel
-    if jogador == 0: # Pedra 
-        print('Computador Ganhou')
-    elif jogador == 1: # Papel
-        print('Empate')
-    elif jogador == 2: # Tesoura
-        print('Jogador Ganhou')
-    else:
-        print('Jogada inválida')
-elif computador == 2: # Tesoura
-    if jogador == 0: # Pedra 
-        print('Jogador Ganhou')
-    elif jogador == 1: # Papel 
-        print('Computador Ganhou')
-    elif jogador == 2: # Tesoura
-        print('Empate')
-    else:
-        print('Jogada inválida')
-print('__FIM__')
+if computador != (jogador - 1):
+    if computador == 0: # Pedra 
+        if (jogador - 1) == 1: # Papel
+            print('Jogador ganhou')
+        elif (jogador - 1) == 2: # Tesoura
+            print('Computador Ganhou')
+    elif computador == 1: # Papel
+        if (jogador - 1) == 0: # Pedra 
+            print('Computador Ganhou')
+        elif (jogador - 1) == 2: # Tesoura
+            print('Jogador Ganhou')
+    elif computador == 2: # Tesoura
+        if (jogador - 1) == 0: # Pedra 
+            print('Jogador Ganhou')
+        elif (jogador - 1) == 1: # Papel 
+            print('Computador Ganhou')
+else:
+    print('Empate!')
+print('\033[31m__FIM__\033[m')
