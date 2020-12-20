@@ -1,14 +1,22 @@
 # Forma de pagamente e condições para pagamento
+from time import sleep
+
 print('PAGAMENTO!')
+
 # Valor do produto
 valor_produto = input('Valor do produto: R$').strip()
+
+sleep(1)
 # Adiquirir a forma de pagamento
 print('Formas de pagamento:')
 print('[1] - à vista dinheiro/cheque: 10% de desconto')
 print('[2] - à vista Cartão: 5% de desconto')
 print('[3] - 3x ou mais no cartão: 20% de juros')
+sleep(1)
+
 # Resposta
 forma_pagamento = int(input('Qual a forma de pagamento (somente o número)?'))
+
 # Realizar a forma de pagamento
 if forma_pagamento == 1:
     # Informar opção escolhida
