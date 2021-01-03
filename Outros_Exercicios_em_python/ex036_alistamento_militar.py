@@ -1,16 +1,16 @@
 # Verificar quando deve se alistar e dar o tempo
 from datetime import date # importar tempo do sistema
 ano_atual = date.today().year # data do pc, hoje().ano
-print('Vamos ver quando você deve se alistar no exercito?')
+print('\033[33mVamos ver quando você deve se alistar no exercito?\033[m')
 # ano de nascimento
 ano_nascimento = int(input('Qual ano você nasceu?'))
 # qual a idade
 idade_do_individuo = int(ano_atual) - ano_nascimento # Identificar a idade do jovem
 tempo_de_alistamento = idade_do_individuo - 18 # Saber quantos anos a pessoa se alistou
 # indicar a situação do individuo
-print('-=' * 10)
+print('\033[31m-=\033[m' * 10)
 print(f'Quem nasceu em {ano_nascimento} tem ou terá {idade_do_individuo} anos em {ano_atual}')
-print('-=' * 10)
+print('\033[31m-=\033[m' * 10)
 # Maior de idade anos
 if idade_do_individuo > 18: 
     if idade_do_individuo == 18:
