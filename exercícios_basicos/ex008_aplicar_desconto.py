@@ -1,30 +1,14 @@
-# DESCONTO DO PRODUTO -> calculador
-
-valor = str(input('Qual o preço do produto?')).upper().strip() # Preço
-desconto = str(input('E o desconto que será aplicado?')).upper().strip() # desconto
-
-# Caso o valor tenha reais ou R$, ignorar
-
-if valor.count('REAIS'):
-    valor = valor.replace('REAIS', '') # Ignora REAIS
-if valor.count('R$'):
-    valor = valor.replace('R$', '') # Ignora R$
-
+# CALCULAR DESCONTO DO PRODUTO
+preco = float(input('\033[33mQual o preço do produto? R$'))
+desconto = str(input('E o desconto que será aplicado?\033[m')).upper().strip() # desconto
 # Caso o desconto tenha % ou porcento, ignorar
-
 if desconto.count('PORCENTO'):
-    desconto = desconto.replace('PORCENTO', '') # ignora PORCENTO
-if desconto.count('%'):
+    desconto = desconto.replace('PORCENTO', '')
+elif desconto.count('%'):
     desconto = desconto.replace('%', '')
-
-# Transformar as variáveis de STR para FLOAT
-
-valor = float(valor)
 desconto = float(desconto)
-aplicar_desconto = valor * desconto / 100 # aplicar o desconto
-
-
-# Dizer o resultado do desconto
-
-print(f'Seu produto de R${valor} com desconto de {desconto}%.')
-print(f'Ficou R${aplicar_desconto}.')
+aplicar_desconto = preco * desconto / 100
+print('\033[32m-=' * 9)
+print(f'\033[mSeu produto de \033[33mR${preco:.2f}\033[m com desconto de \033[33m{desconto:.2f}%\033[m.')
+print(f'Ficou \033[33mR${aplicar_desconto:.2f}\033[m.')
+print('\033[32m-=' * 9 + '\033[m')
