@@ -1,27 +1,14 @@
 # Dizer o aumento do salário
-
-# Pedir salário
-salario = str(input('Olá, qual seu salário atual?')).upper().strip()
-# Pedir a porcentagem de aumento
+salario = float(input('\033[33mOlá, qual seu salário atual? R$'))
 aumento = str(input('E qual a porcentagem para o aumento?')).upper().strip()
-# Desconsiderar R$ e REAIS no salário
-if salario.count('REAIS'):
-    salario = salario.replace('REAIS', '')
-if salario.count('R$'):
-    salario = salario.replace('R$', '')
 # Desconsiderar % e PORCENTO
 if aumento.count('PORCENTO'):
     aumento = aumento.replace('PORCENTO', '')
-if aumento.count('%'):
+elif aumento.count('%'):
     aumento = aumento.replace('%', '')
-# Tornar variáveis em float
-salario = float(salario)
 aumento = float(aumento)
-# Calcular a porcentagem do aumento
-calcular_aumento = salario * aumento / 100
-juntar_aumento_salario = calcular_aumento + salario
-# Dar resultado
-print(f'Antigamente seu salário era R${salario}')
-print(f'E, você recebeu um aumento de {aumento}%')
-print(f'O aumento do seu salário ficou {juntar_aumento_salario}')
+aplicar_aumento = (salario * aumento / 100) + salario
+print(f'\033[33mAntigamente\033[m seu salário \033[33mera R${salario:.2f}\033[m.')
+print(f'E, você \033[33mrecebeu\033[m um aumento de \033[33m{aumento:.2f}%\033[m.')
+print(f'O \033[32maumento do seu salário ficou {aplicar_aumento:.2f}\033[m.')
 print('__FIM__')
