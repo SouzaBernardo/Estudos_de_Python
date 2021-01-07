@@ -8,7 +8,7 @@ elif desconto.count('%'):
     desconto = desconto.replace('%', '')
 desconto = float(desconto)
 aplicar_desconto = preco * desconto / 100
-print('\033[32m-=' * 9)
-print(f'\033[mSeu produto de \033[33mR${preco:.2f}\033[m com desconto de \033[33m{desconto:.2f}%\033[m.')
+print('\033[32m-=' * 9 + '\033[m')
+print(f'Seu produto de \033[33mR${preco:.2f}\033[m com desconto de \033[33m{desconto:.2f}%\033[m.')
 print(f'Ficou \033[33mR${aplicar_desconto:.2f}\033[m.')
 print('\033[32m-=' * 9 + '\033[m')
