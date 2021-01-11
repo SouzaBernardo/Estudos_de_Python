@@ -1,17 +1,13 @@
 # Pedir o nome da pessoa, e analisa-lo
+nome = str(input('\033[33mQual será o nome para analisar?\033[m')).strip()
 
-# Pedir o nome
-nome = str(input('Qual será o nome para analisar?')).strip()
-
-# Analisar
 maiusculo = nome.upper()
 minusculo = nome.lower()
 quantidade_de_letras = len(nome) - nome.count(' ')
 quantidade_letra_primeiro = len(nome.split()[0])
 
-# Resultado
-print(f'Nome em MAIÚSCULO: {maiusculo}.')
-print(f'Nome minúsculo: {minusculo}.')
-print(f'O nome tem {quantidade_de_letras} letras.')
-print(f'O primeiro nome tem {quantidade_letra_primeiro} letras')
+print(f'Nome em MAIÚSCULO: \033[33m{maiusculo}\033[m.')
+print(f'Nome minúsculo: \033[33m{minusculo}\033[m.')
+print(f'O nome tem \033[33m{quantidade_de_letras}\033[m letras.')
+print(f'O primeiro nome tem \033[33m{quantidade_letra_primeiro}\033[m letras')
 print('__FIM__')
