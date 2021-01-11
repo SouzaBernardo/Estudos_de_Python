@@ -1,13 +1,15 @@
 from random import randint
+
 num = randint(0, 9999)
+# linha tirada para 
 #num = int(input('Número inteiro:'))
-u = num // 1 % 10
-d = num // 10 % 10
-c = num // 100 % 10
-m = num // 1000 % 10
+unidade = num // 1 % 10
+dezena = num // 10 % 10
+centena = num // 100 % 10
+milhar = num // 1000 % 10
 print('análisando...')
-print('O número é {}'.format(num))
-print('Unidade: {}'.format(u))
-print('Dezena: {}'.format(d))
-print('Centena: {}'.format(c))
-print('Milhar: {}'.format(m))
+print(f'O número é \033[31m{num}\033[31m')
+print(f'Unidade: \033[31m{unidade}\033[m')
+print(f'Dezena: \033[31m{dezena}\033[m')
+print(f'Centena: \033[31m{centena}\033[m')
+print(f'Milhar: \033[31m{milhar}\033[m')
