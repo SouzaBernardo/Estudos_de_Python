@@ -1,12 +1,8 @@
 # Analisar o nome da cidade
-
-nome = str(input('Digite o nome da sua cidade:')).upper().strip() # Saber o nome
-
-# Analisar o nome
-if nome.count('SANTO'): # Caso tenha SANTO
-    contein = nome.count('SANTO') # Contar quantos SANTOS's tem
-    # Resultado
+nome = str(input('Digite o nome da sua cidade:')).upper().strip()
+if nome.count('SANTO'):
+    vezes_que_aparece = nome.count('SANTO')
     print('Sua cidade tem em seu nome a palavra "SANTO"!') 
-    print(f'Essa palavra aparece {contein} vezes.')
-else: # Caso não tenha SANTO
-    print('Sua cidade não contém a palavra "SANTO"!') # Resultado
+    print(f'Essa palavra aparece {vezes_que_aparece} vezes.')
+else:
+    print('Sua cidade não contém a palavra "SANTO"!')
