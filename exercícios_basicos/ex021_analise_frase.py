@@ -1,18 +1,13 @@
 # Analisar uma Frase
-from unicodedata import normalize
-
-# Pedir frase
 frase = str(input('Digite sua frase:')).upper().strip()
 
-# Analisar
-# Quantas vezes tem a letra A
 quantas_vezes_tem_a = frase.count('A')
-# Encontrar a o lugar da primeira letra 
-encontrar_a = frase.find('A') + 1 # Adicionamos + 1 porque inicia em 0
-# Encontrar a ultima letra A
-ultimo_a = frase.rfind('A') + 1 # Não considera os acentos
+encontrar_a = frase.find('A') + 1
+ultimo_a = frase.rfind('A') + 1 # Problema com acentuação
 
-# Result
-print(f'A frase contém {quantas_vezes_tem_a} letra(s) a / as.')
-print(f'Nessa frase, a primeira letra A se encontra na posição {encontrar_a}')
-print(f'Já a ultima é na posição {ultimo_a}.')
+print('-=' * 28)
+print(f'A frase contém \033[33m{quantas_vezes_tem_a}\033[m letra(s) \033[33ma / as\033[m.')
+print('-=' * 28)
+print(f'Nessa frase, a primeira letra \033[33mA\033[m se encontra na posição \033[33m{encontrar_a}\033[m.')
+print(f'Já a \033[33multima\033[m é na posição \033[33m{ultimo_a}\033[m.')
+print('-=' * 28)
