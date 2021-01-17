@@ -1,34 +1,43 @@
 # Analisar se há multa
 from time import sleep
-from colorama import init
-init()
-# Pedir velocidade
-print('\033[33m-=-\033[m' * 15)
-speed = input('Qual a velocidade que seu carro ultrapassou: ').strip()
-if speed.count(','): # Indicar que o usuário ñ pode usar vírgula
-    print('\033[31mERRO!')
-    print('\033[mNão use VÍRGULA. Use PONTO')
-else: # Caso o usuário ñ use vírgula
-    numero = float(speed.split()[0]) # Transforma o primeiro objeto em float
-# Time (Dar tempo para processar)
-print('\033[33m-=-\033[m' * 15)
+
+cores = {
+    'limpo':'\033[m',
+    'amarelo':'\033[33m',
+    'vermelho':'\033[31m',
+    'azul_claro':'\033[36m',
+    'verde':'\033[32m'
+}
+
+linha_amarela = f'{cores["amarelo"]}-=-' * 15 + f'{cores["limpo"]}'
+
+print(linha_amarela)
+print(f'{cores["vermelho"]}Caso seja número quebrado, use PONTO ao invés de virgula!')
+print('Use somente números, sem KM/h, por exemplo.') # não aceita outra coisa além de números
+
+print(f'{cores["amarelo"]}')
+speed = float(input('Qual a velocidade que seu carro ultrapassou: '))
+print(f'{cores["limpo"]}')
+
+sleep(1)
+print(linha_amarela)
 print('\033[32mANALISANDO...')
-sleep(2)
-print('\033[33m-=-\033[m' * 15)
-# Analisar se há multa
-if numero > 80.0: # Caso tenha ultrapassado o limite
-    multa = (numero - 80) * 7 # Calcular a multa
-    print('\033[31mVocê tem uma \033[36mmulta!\033[31m Ultrapassou o limite de 80Km/h.') # Indica o limite de velocidade
-    print(f'Ela custa \033[36mR${multa:.2f}!\033[m') # Mostra a multa
-elif numero == 80.0: # Caso seja 80 km ñ tem multa, mas dá um aviso
-    print('\033[31mCUIDADO!')
-    print('Você passou no \033[34mLIMITE!')
-    print('\033[32mMULTA NÃO APLICADA')
-else: # Caso NÃO tenha ultrapassado o limite
-    print('\033[32mTudo certo!') # Dar o OK
-    print('Não ultramasse 80km/h.\033[m')
-# FIM
-print('\033[33m-=-' * 15) # Linha amarela
-print('\033[32mLembre de usar cinto de segurança!') # Linha verde, use cinto
-print('\033[33m-=-' * 15)
-print('\033[31m__FIM__\033[m') # Fim vermelho
+print(linha_amarela)
+sleep(1)
+
+if speed > 80.0:
+    multa = (speed - 80) * 7 # Calcular a multa
+    print(f'Você tem uma {cores["vermelho"]}multa!{cores["azul_claro"]} Ultrapassou o limite de 80Km/h.')
+    print(f'Ela custa {cores["vermelho"]}R${multa:.2f}!{cores["limpo"]}')
+elif speed == 80.0:
+    print(f'{cores["vermelho"]}CUIDADO!')
+    print(f'Você passou no {cores["azul_claro"]}LIMITE!')
+    print(f'{cores["azul_claro"]}MULTA NÃO APLICADA')
+else:
+    print(f'{cores["verde"]}Tudo certo!')
+    print(f'Não ultramasse 80km/h.{cores["limpo"]}')
+
+print(linha_amarela)
+print(f'{cores["verde"]}Lembre de usar cinto de segurança!')
+print(linha_amarela)
+print(f'{cores["vermelho"]}__FIM__{cores["limpo"]}')
