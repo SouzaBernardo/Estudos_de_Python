@@ -1,28 +1,36 @@
 from random import randint
-# Criar aleatórios
-a = randint(0, 100)
-b = randint(0, 100) - a
-c = randint(0, 100) - b
-# Mostrar sorteados
-print(a, b, c)
-# Escolhendo o maior
+
+cores = {
+    'limpo':'\033[m',
+    'vermelho':'\033[31m',
+    'verde':'\033[32m',
+    'amarelo':'\033[33m',
+}
+
+a = randint(0, 9)
+b = randint(10, 19)
+c = randint(20, 30)
+
 if b > a and b > c:
     maior = b
 elif c > a and c > b:
     maior = c
 else:
     maior = a
-# Escolhendo o menor
+
 if b < a and b < c:
     menor = b
 elif c < a and c < b:
     menor = c
 else:
     menor = a
-# Resultado
-print('-=-' * 10)
-print('A ordem crescente é {} e {}.'.format(menor, maior))
-print('A ordem decrescente é {} e {}'.format(maior, menor))
-print('-=-' * 10)
-print('O maior é {}'.format(maior))
-print('O menor é {}'.format(menor))
+    
+linha_amarela = f'{cores["amarelo"]}-=-' * 10 + f'{cores["limpo"]}'
+
+print(linha_amarela)
+print(f'A ordem crescente é {cores["vermelho"]}{menor}{cores["limpo"]} e {cores["verde"]}{maior}{cores["limpo"]}.')
+print(f'A ordem decrescente é {cores["verde"]}{maior}{cores["limpo"]} e {cores["vermelho"]}{menor}{cores["limpo"]}.')
+print(linha_amarela)
+print(f'O maior é {cores["verde"]}{maior}{cores["limpo"]}')
+print(f'O menor é {cores["vermelho"]}{menor}{cores["limpo"]}')
+print(linha_amarela)
