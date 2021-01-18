@@ -62,8 +62,8 @@ else:
     else:
         meio = n1
         meio_str = opcoes[0]
-    print(f'O menor é o {menor_str}({menor}).')
-    print(f'o número mediano é {meio_str}({meio}).')
-    print(f'O maior é {maior_str}({maior}).')
-    print(f'A ordem crescente é {menor_str}({menor}), {meio_str}({meio}), {maior_str}({maior}).')
+    print(f'O menor é o {menor} ({menor_str}).')
+    print(f'o número mediano é {meio} ({meio_str}).')
+    print(f'O maior é {maior} ({maior_str}).')
+    print(f'A ordem crescente é {menor} ({menor_str}), {meio} ({meio_str}), {maior} ({maior_str}).')
  
