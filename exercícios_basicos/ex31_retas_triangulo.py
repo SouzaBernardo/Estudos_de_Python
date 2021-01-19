@@ -1,42 +1,54 @@
 # Saber se as 3 retas fazem um riangulo
-reta1 = float(input('Comprimento da primeira reta:')) # Priemira reta
-reta2 = float(input('Comprimento da segunda reta:')) # Segunda reta
-reta3 = float(input('Comprimento da terceira reta:')) # Terceira reta
 
-# definir um padrão para maior e menor
+from time import sleep
 
-menor = reta1 # considera a reta1 a menor -> temporario
-medio = reta1 # quem é o numero do meio
-maior = reta1 # considera a reta1 a maior -> temporario
+cores = {
+    'limpo':'\033[m',
+    'vermelho':'\033[31m',
+    'verde':'\033[32m',
+    'amarelo':'\033[33m',
+}
 
-
-# analisar qual é a reta menor
+reta1 = float(input('Comprimento da primeira reta:'))
+reta2 = float(input('Comprimento da segunda reta:'))
+reta3 = float(input('Comprimento da terceira reta:'))
 
 if reta2 < reta1 and reta2 < reta3: 
     menor = reta2
-if reta3 < reta1 and reta3 < reta2:
+elif reta3 < reta1 and reta3 < reta2:
     menor = reta3
-
-# analisar qual é a reta maior
+else:
+    menor = reta1
 
 if reta2 > reta1 and reta2 > reta3:
     maior = reta2
-if reta3 > reta1 and reta3 > reta2:
+elif reta3 > reta1 and reta3 > reta2:
     maior = reta3
-
-# analisar quem é o medio
+else:
+    maior = reta1
 
 if reta2 < maior and reta2 > menor:
     medio = reta2
-if reta3 < maior and reta3 > menor:
+elif reta3 < maior and reta3 > menor:
     medio = reta3
-
-# indicar a ordem
-
-print(menor, medio, maior)
-
-# fazem uma reta?
-if menor + medio > maior:
-    print('Elas fazem um triangulo')
 else:
-    print('Elas não fazem um triangulo')
+    medio = reta1
+
+linha = f'{cores["amarelo"]}-=-' * 9 + f'{cores["limpo"]}'
+
+print(linha)
+print(f'A ordem crescente é:')
+sleep(1)
+print(f'> {cores["amarelo"]}{menor}{cores["limpo"]}.')
+sleep(1)
+print(f'> {cores["amarelo"]}{medio}{cores["limpo"]}.')
+sleep(1)
+print(f'> {cores["amarelo"]}{maior}{cores["limpo"]}.')
+print(linha)
+
+if menor + medio > maior:
+    print(f'Elas {cores["verde"]}fazem{cores["limpo"]} um {cores["amarelo"]}triangulo!{cores["limpo"]}')
+else:
+    print(f'Elas {cores["vermelho"]}não{cores["limpo"]} fazem um {cores["amarelo"]}triangulo!{cores["limpo"]}')
+
+print(linha)
