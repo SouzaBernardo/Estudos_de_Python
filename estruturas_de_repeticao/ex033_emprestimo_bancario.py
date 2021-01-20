@@ -4,46 +4,30 @@ cores = {
     'limpo':'\033[m',
     'vermelho':'\033[31m',
     'verde':'\033[32m',
+    'amarelo':'\033[33m',
 }
 
-valor_da_casa = str(input('Valor da casa que dejesa comprar: R$')).strip()
-valor_do_salario = str(input('valor do seu salário: R$')).strip()
-anos_a_pagar = str(input('Em quantos anos quer pagar a casa? ')).strip()
+linha_amarela = f'{cores["amarelo"]}-=' * 25 + f'{cores["limpo"]}'
 
-'''
-if valor_da_casa.count(',') or valor_do_salario.count(',') or anos_a_pagar.count(','):
-    print('\033[31mERRO!\033[m.')
-    print('Você usou \033[31mvirgula\033[m. Tente usar \033[31mPonto\033[m!')
-elif anos_a_pagar.count('.'):
-    print('\033[31mERRO!\033[m.')
-    print('Você usou \033[31m"."\033[m na \033[31m3° opção\033[m.')
-    print('Use \033[31mnúmeros inteiros nessa opção\033[m.')
-    print('Tente novamente!')
-elif valor_da_casa.count('.') and valor_do_salario.count('.'):
-    valor_da_casa = float(valor_da_casa)
-    valor_do_salario = float(valor_do_salario)
-elif valor_da_casa.count('.'):
-    valor_da_casa = float(valor_da_casa)
-    valor_do_salario = int(valor_do_salario)
-elif valor_do_salario.count('.'):
-    valor_da_casa = int(valor_da_casa)
-    valor_do_salario = float(valor_do_salario)
-else:
-    valor_da_casa = int(valor_da_casa)
-    valor_do_salario = int(valor_do_salario)
-'''
+print(linha_amarela)
+valor_da_casa = float(input('Valor da casa que dejesa comprar: R$'))
+print(linha_amarela)
+valor_do_salario = float(input('valor do seu salário: R$'))
+print(linha_amarela)
+anos_a_pagar = int(input('Em quantos anos quer pagar a casa? '))
+print(linha_amarela)
 
-anos_a_pagar = int(anos_a_pagar[0])
 meses_do_ano = anos_a_pagar * 12
 prestacao = valor_da_casa / meses_do_ano 
 porcentagem_do_salario = (valor_do_salario * 30) / 100
 
 if prestacao >= porcentagem_do_salario:
-    print('O emprestimo \033[31mfoi negado\033[m.') # Será liberada
-    print('O valor da casa \033[31multrapassou os 30%\033[m do seu salário.')
+    print(f'O emprestimo {cores["vermelho"]}foi negado{cores["limpo"]}.') # Será liberada
+    print(f'O valor da casa {cores["vermelho"]}ultrapassou os 30%{cores["limpo"]} do seu salário.')
+    print(linha_amarela)
 else:
-    # Será liberada
-    print('\033[32m TUDO CERTO.\033[m') 
-    print('Emprestimo \033[32mAceito\033[m')
-    print(f'O valor da casa é \033[32mR${valor_da_casa}\033[m.')
-    print(f'Você vai paragar em \033[32m{prestacao:.2f} meses\033[m.')
+    print(f'{cores["verde"]}TUDO CERTO{cores["limpo"]}!!!') 
+    print(f'Emprestimo {cores["verde"]}Aceito{cores["limpo"]}!!!')
+    print(f'O valor da casa é {cores["verde"]}R${valor_da_casa:.2f}{cores["limpo"]}.')
+    print(f'Você vai paragar em {cores["verde"]}{anos_a_pagar} anos{cores["limpo"]}.')
+    print(linha_amarela)
