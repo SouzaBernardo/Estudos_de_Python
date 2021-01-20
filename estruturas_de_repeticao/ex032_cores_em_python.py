@@ -1,6 +1,4 @@
-# Usar Cores no Python
-import colorama
-colorama.init()
+# Aprendendo usar Cores no Python
 
 '''Tipos de cor:
     0 → Sem style
@@ -16,13 +14,16 @@ colorama.init()
     35 - Violeta
     36 - Ciano
     37 - Cinza'''
+
 nome = 'Bernardo'
 a = 3
 b = 5
 cores = {
     'limpa':'\033[m',
     'azul':'\033[34m',
-    'amarelo':'\033[33m'}
+    'amarelo':'\033[33m',
+    'verde':'\033[32m'
+}
 
 print(f'Olá!{cores["azul"]}{nome}')
-print(f'Os valores são \033[32m{a}\033[32m e \033[34m{b}\033[m')
+print(f'Os valores são {cores["verde"]}{a}{cores["limpa"]} e {cores["verde"]}{b}{cores["limpa"]}')
