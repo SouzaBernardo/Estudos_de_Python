@@ -1,7 +1,11 @@
 # Verificar quando deve se alistar e dar o tempo
 from datetime import date # importar tempo do sistema
 ano_atual = date.today().year # data do pc, hoje().ano
-
+cores = {
+    'limpo': '\033[m',
+    'vermelho': '\033[31m',
+    'amarelo': '\033[33m',
+}
 print('\033[33mVamos ver quando você deve se alistar no exercito?\033[m')
 
 ano_nascimento = int(input('Qual ano você nasceu?'))
