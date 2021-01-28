@@ -39,4 +39,4 @@ elif forma_pagamento == 3:
     print(f'Este produto foi parcelado em {meses_parcelados} meses.')
 
 else:
-    print('Você não escolheu uma opção...') 
+    print('Você não escolheu uma opção...')  # fazer com que isso venha antes
