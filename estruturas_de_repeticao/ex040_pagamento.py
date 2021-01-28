@@ -1,6 +1,11 @@
 # Forma de pagamente e condições para pagamento
 from time import sleep
-
+cores = {
+    'limpa':'\033[m',
+    'azul':'\033[34m',
+    'amarelo':'\033[33m',
+    'verde':'\033[32m'
+}
 print('PAGAMENTO!')
 valor_produto = input('Valor do produto: R$').strip()
 
