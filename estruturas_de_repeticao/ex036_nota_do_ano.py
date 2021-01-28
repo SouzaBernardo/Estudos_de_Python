@@ -1,5 +1,10 @@
 # Dizer a média anual de um aluno e dizer se ele passou.
-
+cores = {
+    'limpa':'\033[m',
+    'azul':'\033[34m',
+    'amarelo':'\033[33m',
+    'verde':'\033[32m'
+}
 print('\033[32mBOLETIM:\033[m')
 print('Para saber se você passou, preciso das suas notas do 1° e 2° semestre...')
 
