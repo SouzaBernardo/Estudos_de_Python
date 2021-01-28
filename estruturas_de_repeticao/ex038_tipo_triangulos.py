@@ -1,4 +1,10 @@
 # Verificar se as retas formam um triangulo, se sim, qual?
+cores = {
+    'limpa':'\033[m',
+    'azul':'\033[34m',
+    'amarelo':'\033[33m',
+    'verde':'\033[32m'
+}
 print('Vamos analisar 3 retas? preciso saber a medida delas!')
 
 pri_reta = input('Medida da primeira reta:').strip().split()
