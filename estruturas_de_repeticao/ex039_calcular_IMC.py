@@ -4,7 +4,7 @@ cores = {
     'azul':'\033[34m',
     'amarelo':'\033[33m',
     'verde':'\033[32m'
-}
+}# arrumar as cores
 print('Vamos calcular seu IMC!')
 
 peso_kg = str(input('Preciso saber seu peso, em Quilogramas: ')).strip()

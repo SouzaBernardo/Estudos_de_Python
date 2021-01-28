@@ -4,7 +4,7 @@ cores = {
     'azul':'\033[34m',
     'amarelo':'\033[33m',
     'verde':'\033[32m'
-}
+}# arrumar as cores
 print('Vamos descobrir qual é sua categoria!')
 
 idade_str = input('Qual a sua idade?').strip().lower() 
