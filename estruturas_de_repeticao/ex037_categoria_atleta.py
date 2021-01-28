@@ -1,4 +1,10 @@
 # Dizer a categoria de um atleta
+cores = {
+    'limpa':'\033[m',
+    'azul':'\033[34m',
+    'amarelo':'\033[33m',
+    'verde':'\033[32m'
+}
 print('Vamos descobrir qual é sua categoria!')
 
 idade_str = input('Qual a sua idade?').strip().lower() 
