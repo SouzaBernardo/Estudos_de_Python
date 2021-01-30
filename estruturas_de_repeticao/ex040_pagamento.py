@@ -2,10 +2,10 @@
 from time import sleep
 cores = {
     'limpa':'\033[m',
-    'azul':'\033[34m',
+    'verde':'\033[32m',
     'amarelo':'\033[33m',
-    'verde':'\033[32m'
-} # arrumar as cores
+    'azul':'\033[34m',
+}# arrumar as cores
 print('PAGAMENTO!')
 valor_produto = input('Valor do produto: R$').strip()
 

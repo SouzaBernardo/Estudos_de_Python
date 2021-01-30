@@ -1,9 +1,9 @@
 # Verificar se as retas formam um triangulo, se sim, qual?
 cores = {
     'limpa':'\033[m',
-    'azul':'\033[34m',
+    'verde':'\033[32m',
     'amarelo':'\033[33m',
-    'verde':'\033[32m'
+    'azul':'\033[34m',
 }# arrumar as cores
 print('Vamos analisar 3 retas? preciso saber a medida delas!')
 

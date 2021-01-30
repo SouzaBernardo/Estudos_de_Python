@@ -1,9 +1,9 @@
 # Calcular o IMC de uma pessoa
 cores = {
     'limpa':'\033[m',
-    'azul':'\033[34m',
+    'verde':'\033[32m',
     'amarelo':'\033[33m',
-    'verde':'\033[32m'
+    'azul':'\033[34m',
 }# arrumar as cores
 print('Vamos calcular seu IMC!')
 
