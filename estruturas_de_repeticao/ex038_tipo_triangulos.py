@@ -4,7 +4,10 @@ cores = {
     'verde':'\033[32m',
     'amarelo':'\033[33m',
     'azul':'\033[34m',
-}# arrumar as cores
+}
+
+linha = f'{cores["amarelo"]}-=' * 30 + f'{cores["limpo"]}'
+
 print('Vamos analisar 3 retas? preciso saber a medida delas!')
 
 pri_reta = input('Medida da primeira reta:').strip().split()
