@@ -3,7 +3,6 @@ cores = {
     'limpo':'\033[m',
     'verde':'\033[32m',
     'amarelo':'\033[33m',
-    'azul':'\033[34m',
 }
 
 linha = f'{cores["amarelo"]}-=' * 30 + f'{cores["limpo"]}'
@@ -18,14 +17,16 @@ idade_int = int(idade_str.split()[0])
 print(linha)
 
 if idade_int <= 9:
-    print('Sua categoria é MIRIM!')
+    categoria = 'MIRIM'
 elif idade_int <= 14:
-    print('Sua categoria é INFATIL')
+    categoria = 'INFATIL'
 elif idade_int <= 19:
-    print('Sua categoria é JÚNIOR')
+    categoria = 'JÚNIOR'
 elif idade_int <= 20:
-    print('Sua categoria é SÊNIOR')
+    categoria = 'SÊNIOR'
 else:
-    print('Sua categoria é MASTER')
-print(f'Devido a sua idade que é {cores["verde"]}{idade_int}{cores["limpo"]} anos.')
+    categoria = 'MASTER'
+
+print(f'Sua categoria é {cores["verde"]}{categoria}{cores["limpo"]}')
+print(f'Devido a sua idade que é {cores["verde"]}{idade_int} anos{cores["limpo"]}.')
 print(linha)
