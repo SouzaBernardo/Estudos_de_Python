@@ -8,8 +8,10 @@ cores = {
 
 linha = f'{cores["amarelo"]}-=' * 30 + f'{cores["limpo"]}'
 
+print(linha)
 print('Vamos analisar 3 retas? preciso saber a medida delas!')
 
+print(linha)
 pri_reta = input('Medida da primeira reta:').strip().split()
 seg_reta = input('Medida da segunda reta:').strip().split()
 ter_reta = input('Medida da terceira reta:').strip().split()
@@ -53,3 +55,4 @@ if menor + media > maior:
         print('Este é um triangulo isoceles')
 else: 
     print('NÃO forma um triangulo')
+print(linha)
