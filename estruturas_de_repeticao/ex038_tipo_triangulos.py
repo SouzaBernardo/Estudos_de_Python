@@ -1,6 +1,7 @@
 # Verificar se as retas formam um triangulo, se sim, qual?
 cores = {
     'limpo':'\033[m',
+    'vermelho':'\033[31m',
     'verde':'\033[32m',
     'amarelo':'\033[33m',
     'azul':'\033[34m',
@@ -9,7 +10,7 @@ cores = {
 linha = f'{cores["amarelo"]}-=' * 30 + f'{cores["limpo"]}'
 
 print(linha)
-print(f'{cores["amarelo"]}Vamos analisar 3 retas? preciso saber a medida delas!{cores["limpo"]}')
+print(f'{cores["azul"]}Vamos analisar 3 retas? preciso saber a medida delas!{cores["limpo"]}')
 
 print(linha)
 pri_reta = input('Medida da primeira reta:').strip().split()
@@ -49,11 +50,11 @@ if menor + media > maior:
     escaleno = pri_reta != seg_reta and pri_reta != ter_reta and seg_reta != ter_reta
     
     if equilatero == True:
-        print('Este triangulo é um equilatero')
+        print(f'{cores["verde"]}Este triangulo é um equilatero{cores["limpo"]}')
     elif escaleno == True: 
-        print('Este é um triangulo escaleno')
+        print(f'{cores["verde"]}Este é um triangulo escaleno{cores["limpo"]}')
     else:
-        print('Este é um triangulo isoceles')
+        print(f'{cores["verde"]}Este é um triangulo isoceles{cores["limpo"]}')
 else: 
-    print('NÃO forma um triangulo')
+    print(f'{cores["vermelho"]}NÃO forma um triangulo{cores["limpo"]}')
 print(linha)
