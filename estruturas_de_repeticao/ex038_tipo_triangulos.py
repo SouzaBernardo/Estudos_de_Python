@@ -9,31 +9,32 @@ cores = {
 linha = f'{cores["amarelo"]}-=' * 30 + f'{cores["limpo"]}'
 
 print(linha)
-print('Vamos analisar 3 retas? preciso saber a medida delas!')
+print(f'{cores["amarelo"]}Vamos analisar 3 retas? preciso saber a medida delas!{cores["limpo"]}')
 
 print(linha)
 pri_reta = input('Medida da primeira reta:').strip().split()
 seg_reta = input('Medida da segunda reta:').strip().split()
 ter_reta = input('Medida da terceira reta:').strip().split()
-
+print(linha)
+      
 pri_reta = float(pri_reta[0])
 seg_reta = float(seg_reta[0])
 ter_reta = float(ter_reta[0])
-
+# menor
 if seg_reta < pri_reta and seg_reta < ter_reta:
     menor = seg_reta
 elif ter_reta < pri_reta and ter_reta < seg_reta:
     menor = ter_reta
 else:
     menor = pri_reta
-
+# maior
 if seg_reta > pri_reta and seg_reta > ter_reta:
     maior = seg_reta 
 elif ter_reta > pri_reta and ter_reta > seg_reta:
     maior = ter_reta 
 else:
     maior = pri_reta
-
+# medio
 if seg_reta > menor and seg_reta < maior:
     media = seg_reta
 elif ter_reta > menor and ter_reta < maior:
