@@ -2,8 +2,6 @@
 cores = {
     'limpo':'\033[m',
     'verde':'\033[32m',
-    'amarelo':'\033[33m',
-    'azul':'\033[34m',
 }
 print(f'{cores["verde"]}BOLETIM:{cores["limpo"]}')
 print('Para saber se você passou, preciso das suas notas do 1° e 2° semestre...')
