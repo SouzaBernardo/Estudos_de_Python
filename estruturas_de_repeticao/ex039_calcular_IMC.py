@@ -3,9 +3,9 @@ cores = {
     'limpo':'\033[m',
     'verde':'\033[32m',
     'amarelo':'\033[33m',
-    'azul':'\033[34m',
-}# arrumar as cores
-linha = f'{cores["amarelo"]}-=' * 22 + f'{cores["limpo"]}'
+}
+
+linha = f'{cores["amarelo"]}-=' * 26 + f'{cores["limpo"]}'
 
 print(linha)
 print('Vamos calcular seu IMC!')
@@ -34,5 +34,5 @@ elif imc_pessoa >= 35 and imc_pessoa <= 39.9:
 else:
     imc_class = 'Obesidade Mórbida (Grau III)'
 
-print(f'Seu IMC é {imc_pessoa:.2f} e sua classificação é {imc_class}')
+print(f'Seu {cores["verde"]}IMC é {imc_pessoa:.2f}{cores["limpo"]} e sua {cores["verde"]}classificação é {imc_class}{cores["limpo"]}')
 print(linha)
