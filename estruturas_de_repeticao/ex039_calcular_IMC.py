@@ -15,15 +15,16 @@ alt_metros = float(alt_metros.split()[0])
 
 imc_pessoa = peso_kg / (alt_metros ** 2)
 
-if imc_pessoa < 18.5:
-    print('Peso Baixo')
-elif imc_pessoa >= 18.5 or imc_pessoa <= 24.9:
-    print('Peso Normal')
+imc_class = 'Peso Baixo'
+
+if imc_pessoa >= 18.5 or imc_pessoa <= 24.9:
+    imc_class = 'Peso Normal'
 elif imc_pessoa >= 25 or imc_pessoa <= 29.9:
-    print('Sobre Peso')
+    imc_class = 'Sobre Peso'
 elif imc_pessoa >= 30 or imc_pessoa <= 34.9:
-     print('Obesidade (Grau I)')
+     imc_class = 'Obesidade (Grau I)'
 elif imc_pessoa >= 35 or imc_pessoa <= 39.9:
-    print('Obesidade Severa (Grau II)')
+    imc_class = 'Obesidade Severa (Grau II)'
 else:
-    print('Obesidade Mórbida (Grau III)')
+    imc_class = 'Obesidade Mórbida (Grau III)'
+print(f'Seu peso é {imc_pessoa} e sua classificação é {imc_class}')
