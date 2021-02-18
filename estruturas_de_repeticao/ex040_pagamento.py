@@ -2,6 +2,7 @@
 # from time import sleep
 cores = {
     'limpo':'\033[m',
+    'vermelho':'\033[31m',
     'verde':'\033[32m',
     'amarelo':'\033[33m',
     'azul':'\033[34m',
@@ -9,6 +10,7 @@ cores = {
 
 linha = f'{cores["amarelo"]}-=' * 30 + f'{cores["limpo"]}'
 opcoes_de_pagamento = ['à vista dinheiro/cheque: 10% de desconto', 'à vista Cartão: 5% de desconto.', '3x ou mais no cartão: 20% de juros']
+meses_parcelados = '1'
 
 print(linha)
 
@@ -47,16 +49,17 @@ else:
         valor_produto = float(valor_produto) + (float(valor_produto) * 2 / 10)
 
         meses_parcelados = input('Meses parcelados:').strip()
-        if float(meses_parcelados[0]) < 3: # arrumar aqui
-            print('Erro! Deve ser acima de 3 meses!')
-        else: # reparar daqui para baixo...
+
+        if float(meses_parcelados[0]) > 3:
             valor_juros_mensal = valor_produto / float(meses_parcelados.split()[0])
             valor_produto_parcelado = float(valor_produto) / float(meses_parcelados.split()[0])
             produto_mensal_jurado = valor_produto_parcelado + valor_juros_mensal
-
-        print(f'Nessa opção o produto sai por R${valor_produto_parcelado:.2f} ao mês.')
-        print(f'Este produto foi parcelado em {meses_parcelados} meses.')
-
+        else: 
+            # mensagem de erro, para o programa
+            print(f'{cores["vermelho"]}ERRO! Deve ser acima de 3 meses!{cores["limpo"]}')
+        
 print(f'Escolha {escolha}!')
 print(f'Forma de pagamento: {opcoes_de_pagamento}')
 print(f'Nesta forma o produto sai por: R${valor_produto}')
+print(f'Este produto foi parcelado em {meses_parcelados} meses.')
+#print(f'Nessa opção o produto sai por R${valor_produto_parcelado:.2f} ao mês.')
