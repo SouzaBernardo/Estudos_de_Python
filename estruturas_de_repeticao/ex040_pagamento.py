@@ -47,7 +47,7 @@ else:
         valor_produto = float(valor_produto) + (float(valor_produto) * 2 / 10)
 
         meses_parcelados = input('Meses parcelados:').strip()
-        if meses_parcelados < 3:
+        if float(meses_parcelados[0]) < 3: # arrumar aqui
             print('Erro! Deve ser acima de 3 meses!')
         else: # reparar daqui para baixo...
             valor_juros_mensal = valor_produto / float(meses_parcelados.split()[0])
