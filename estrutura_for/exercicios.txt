@@ -24,3 +24,22 @@
     media da idade 
     mais velho
     quantas mulheres menores de 20anos
+-=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=-=-=-=-
+[] - Exercício 01
+    - ler o sexo, aceitar M ou F = digitar novamente
+[] - Exercício 02
+    - pensar um número e dizer quando o user acertar, e dizer a quantidade de palpites dados
+[] - Exercício 03
+    - MENU: ler dois valores, 1- soma, 2- multplicar, 3- maior, 4- novos número, 5- sair
+[] - Exercício 04
+    - pede um número e mostra o fatorial 5! = 5x4x3x2x1 = 120
+[] - Exercício 05
+    - ler o primeiro termo e a razer, mantando a pa
+[] - Exercício 06
+    - ex05 com mais termos
+[] - Exercício 07
+    - sequência de fibonacci
+[] - Exercício 08
+    - programa para quando digitar 999. quantos numeros foram digitados e a sua soma (desconsiderar o flag)
+[] - Exercício 09
+    - ler varios números. Ao fim mostrar a media entre todos os valores, qual for o maior e qual foi o menor. perguntar se quer continuar ou nao.
