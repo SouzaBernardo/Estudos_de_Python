@@ -1,25 +1,25 @@
-# exercicio 01
+[v] exercicio 01
     - contagem regressiva para fogos de artificio
         - até 10 com 1 segundo entre eles
-# exercicio 02
+[v] exercicio 02
     - todos numeros pares entre 1 e 50 
-# exercicio 03
+[v] exercicio 03
     - soma de numero impar que são multiplos de 3 entre 1 e 500
-# exercicio 04
+[] exercicio 04
     - refazer a tabuada so que com o for
-# exercicio 05
+[] exercicio 05
     - 6 numeros int mostrar somas dos pares
-# exercicio 06
+[] exercicio 06
     - primeiro termo e a razao de uma pa 10 primeiro termos
-# exercicio 07
+[] exercicio 07
     - numero inteiro e se é primo
-# exercicio 08
+[] exercicio 08
     - DIZER SE É UM  palindromo -> de tras pra frente
-# exercicio 09
+[] exercicio 09
     - ano de nacimento de 7 pessoas
-# exercicio 010
+[] exercicio 010
     - peso de 5 pessoas e qual o maior e o menor
-# exercicio 011
+[] exercicio 011
     - nome, idade e sexo
     media da idade 
     mais velho
