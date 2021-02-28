@@ -1,16 +1,30 @@
-# Pedir um número e dizer seu sucessor e antecessor
-cores = {
-    'sem_cor':'\033[m',
-    'amarelo':'\033[33m',
-    'vermelho':'\033[31m',
-    'azul':'\033[34m'
+# Ask for a number and tell your successor and predecessor
+
+colors = {
+    'no_color':'\033[m',
+    'yellow':'\033[33m',
+    'red':'\033[31m',
+    'blue':'\033[34m'
 }
-numero = int(input(f'{cores["amarelo"]}Digite um número inteiro:'))
-sucessor = numero + 1 
-antecessor = numero - 1 
-print('=/' * 9 + f'={cores["sem_cor"]}')
-print(f'Seu número foi {cores["amarelo"]}{numero}{cores["sem_cor"]};')
-print(f'O {cores["vermelho"]}antecessor{cores["sem_cor"]} desse número é {cores["vermelho"]}{antecessor}{cores["sem_cor"]};')
-print(f'O {cores["azul"]}sucessor{cores["sem_cor"]} é {cores["azul"]}{sucessor}{cores["amarelo"]}.') 
-print('=/' * 9 + '=')
-print(f'__FIM__{cores["sem_cor"]}')
+
+successor = 0
+predecessor = 0
+line = f'{colors["yellow"]}=/' * 9 + f'={colors["no_color"]}'
+number = 0
+
+print(line)
+number = input('Enter a number:')
+while number.count('.') or number.count(','):
+    print(line)
+    print(f'{colors["red"]}ERROR!!! Enter an integer{colors["no_color"]}')
+    number = input('Enter a number:')
+
+successor = int(number) + 1 
+predecessor = int(number) - 1 
+
+print(line)
+print(f'Your number is {colors["yellow"]}{number}{colors["no_color"]}')
+print(f'The {colors["yellow"]}predecessor{colors["no_color"]} is {colors["yellow"]}{predecessor}{colors["no_color"]};')
+print(f'The {colors["blue"]}successor{colors["no_color"]} is {colors["blue"]}{successor}{colors["yellow"]}.') 
+print(line)
+print('END')
