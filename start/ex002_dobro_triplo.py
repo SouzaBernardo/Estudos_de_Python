@@ -1,17 +1,24 @@
-# Dizer o dobro, triblo e a raiz de um número INTEIRO...
-cores = {
-    'sem_cor':'\033[m',
-    'amarelo':'\033[33m',
-    'vermelho':'\033[31m',
-    'azul':'\033[34m',
-    'verde':'\033[32m'
+# Say double, triple and the number root (int)...
+colors = {
+    'no_color':'\033[m',
+    'yellow':'\033[33m',
+    'red':'\033[31m',
+    'blue':'\033[34m',
+    'green':'\033[32m'
 }
-num = int(input('Digite um número:'))
-dobro = num * 2
-triplo = num * 3 
-raiz = num ** (1/2)
-# resultados
-print(f'Seu número escolhido foi {cores["amarelo"]}{num}{cores["sem_cor"]}.')
-print(f'O DOBRO dele é {cores["vermelho"]}{dobro}{cores["sem_cor"]}')
-print(f'Já, seu triplo é {cores["azul"]}{triplo}{cores["sem_cor"]}')
-print(f'Por fim, a sua raiz é {cores["verde"]}{raiz:.2f}{cores["sem_cor"]}')
+
+num_user = input('Enter a number:')
+# Error
+while num_user.count(',') or num_user.count('.'):
+    print(f'{colors["red"]}ERROR!!! Enter a number integer!{colors["no_color"]}')
+    num_user = input('Enter a number:')
+# calc
+num_user = int(num_user)
+do = num_user * 2
+tri = num_user * 3 
+ro = num_user ** (1/2)
+# result
+print(f'Your number is {colors["yellow"]}{num_user}{colors["no_color"]}.')
+print(f'The double is {colors["red"]}{do}{colors["no_color"]}')
+print(f'The triple is {colors["blue"]}{tri}{colors["no_color"]}')
+print(f'The root is {colors["green"]}{ro:.2f}{colors["no_color"]}')
