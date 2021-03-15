@@ -1,3 +1,4 @@
+exercíicos for
 [v] exercicio 01
     - contagem regressiva para fogos de artificio
         - até 10 com 1 segundo entre eles
@@ -25,6 +26,7 @@
     mais velho
     quantas mulheres menores de 20anos
 -=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=-=-=-=-
+exercícios while
 [] - Exercício 01
     - ler o sexo, aceitar M ou F = digitar novamente
 [] - Exercício 02
@@ -43,3 +45,9 @@
     - programa para quando digitar 999. quantos numeros foram digitados e a sua soma (desconsiderar o flag)
 [] - Exercício 09
     - ler varios números. Ao fim mostrar a media entre todos os valores, qual for o maior e qual foi o menor. perguntar se quer continuar ou nao.
+-=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=-=-=-=-
+exercícios tuplas
+[] - criar uma tupla com a contagem de 0 a 20, o programa deve ler do usuáiro um número dentro desse conjunto e escreve-lo por extenso (sem if)
+[] - tupla com 20 colocados, mostrar os 5 primeiros colocados, ultimos 4 colocados, lista com orde alfabética, em que posição esta o time X
+''https://youtu.be/0LB3FSfjvao?t=2802'' => faltou
+[] -
