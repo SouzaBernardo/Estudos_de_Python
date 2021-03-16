@@ -6,9 +6,9 @@ exercíicos for
     - todos numeros pares entre 1 e 50 
 [v] exercicio 03
     - soma de numero impar que são multiplos de 3 entre 1 e 500
-[] exercicio 04
+[V] exercicio 04
     - refazer a tabuada so que com o for
-[] exercicio 05
+[v] exercicio 05
     - 6 numeros int mostrar somas dos pares
 [] exercicio 06
     - primeiro termo e a razao de uma pa 10 primeiro termos
