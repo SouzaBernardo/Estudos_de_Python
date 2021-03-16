@@ -9,23 +9,26 @@ exercíicos for
 [V] exercicio 04
     - refazer a tabuada so que com o for
 [v] exercicio 05
-    - 6 numeros int mostrar somas dos pares
-[] exercicio 06
-    - primeiro termo e a razao de uma pa 10 primeiro termos
-[] exercicio 07
-    - numero inteiro e se é primo
+    - ler 6 numeros int mostrar somas dos pares
+[v] exercicio 06
+    - ler o primeiro termo e a razao de uma pa, para mostrar os 10 primeiro termos
+[v] exercicio 07
+    - ler numero inteiro e dizer se é primo
 [] exercicio 08
     - DIZER SE É UM  palindromo -> de tras pra frente
+    - desconsiderar os espaços e os acentos
 [] exercicio 09
-    - ano de nacimento de 7 pessoas
+    - ler ano de nacimento de 7 pessoas
+    - dizer quantos são maiores de 21 anos
 [] exercicio 010
-    - peso de 5 pessoas e qual o maior e o menor
+    - ler peso de 5 pessoas e dizer quel qual o maior e o menor
 [] exercicio 011
-    - nome, idade e sexo
-    media da idade 
-    mais velho
-    quantas mulheres menores de 20anos
--=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=-=-=-=-
+    - nome, idade e sexo => 4 pessoas
+    ## mostrar
+        -media da idade 
+        -mais velho
+        -quantas mulheres menores de 20anos
+-=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=
 exercícios while
 [] - Exercício 01
     - ler o sexo, aceitar M ou F = digitar novamente
@@ -45,7 +48,7 @@ exercícios while
     - programa para quando digitar 999. quantos numeros foram digitados e a sua soma (desconsiderar o flag)
 [] - Exercício 09
     - ler varios números. Ao fim mostrar a media entre todos os valores, qual for o maior e qual foi o menor. perguntar se quer continuar ou nao.
--=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=-=-=-=-
+-=-=-=-=-=-=-==--=-==-=-=-=-=-==-=-=-=-=-=--==--==-=--=-==--==--==-=-=--==-=
 exercícios tuplas
 [] - criar uma tupla com a contagem de 0 a 20, o programa deve ler do usuáiro um número dentro desse conjunto e escreve-lo por extenso (sem if)
 [] - tupla com 20 colocados, mostrar os 5 primeiros colocados, ultimos 4 colocados, lista com orde alfabética, em que posição esta o time X

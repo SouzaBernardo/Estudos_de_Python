@@ -10,23 +10,14 @@
 '''
 
 def main():
-    print('Enter the first 10 terms')
+    # estavs errado 
+    term = int(input('Digite o primeiro termo da PA:'))
+    r = int(input('Digite a razão da PA:'))
 
-    terms = []# all terms
-    cont = 1 # st
-    ant = 0 #anterior
-    term = 0 # the term
-    r = 0 #reason
-    
     for i in range(0, 10):
-        ant = term
-        term = int(input(f'Enter {cont}st the here:'))
-        cont += 1 # number st
-        r =  term - ant # ap
-        terms.append(term)
-    # finish tomorrow---------
-    print(f'The terms are {terms}')
-    print(f'The reason is {r}') # this
+        print(term)
+        term += r
+        
 
 if __name__ == "__main__":
     main()
