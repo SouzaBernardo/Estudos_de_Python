@@ -2,16 +2,27 @@
     DIZER SE É UM  palindromo -> de tras pra frente
         - desconsiderar os espaços e os acentos
 '''
-# antes da revisão ...
+# Revisado ...
 def main():
-    palavra = input('Digite a palavra escolhida:').upper()
-    lista = list(palavra)
-    #como inverter uma lista ?
-    inverso_lista = lista[::-1] # assim podemos inverter uma lista...
-    if lista == inverso_lista:
+    frase = input('Digite a palavra escolhida:').strip().upper()
+    palavras = frase.split()
+    junto = ''.join(palavras)
+    inverso = ''
+    #inverso = junto[::-1] => mas ai não da para usar o for...
+    for letra in range(len(junto) - 1, -1, -1): 
+        inverso += junto[letra]
+    '''    
+        #len(junto) - 1 => do 0 ao 19, por exemplo...
+        # -1 => O segundo -1 é para ele começar do final, posição -1
+        # -1 => O último -1 é para ele ir voltando uma letra 
+    '''
+
+    print(f'O inverso de {junto} é: {inverso}.')
+
+    if inverso == junto:
         print('É um palindromo!')
     else:
-        print('Não é um palindromo!')
-
+        print('Não é um palindromo...')
+        
 if __name__ == "__main__":
     main()
