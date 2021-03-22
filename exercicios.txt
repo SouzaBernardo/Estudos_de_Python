@@ -1,23 +1,23 @@
 exercíicos for
-[v] exercicio 01
+[V] exercicio 01
     - contagem regressiva para fogos de artificio
         - até 10 com 1 segundo entre eles
-[v] exercicio 02
+[V] exercicio 02
     - todos numeros pares entre 1 e 50 
-[v] exercicio 03
+[V] exercicio 03
     - soma de numero impar que são multiplos de 3 entre 1 e 500
 [V] exercicio 04
     - refazer a tabuada so que com o for
-[v] exercicio 05
+[V] exercicio 05
     - ler 6 numeros int mostrar somas dos pares
-[v] exercicio 06
+[V] exercicio 06
     - ler o primeiro termo e a razao de uma pa, para mostrar os 10 primeiro termos
-[v] exercicio 07
+[V] exercicio 07
     - ler numero inteiro e dizer se é primo
-[] exercicio 08
+[V] exercicio 08
     - DIZER SE É UM  palindromo -> de tras pra frente
     - desconsiderar os espaços e os acentos
-[] exercicio 09
+[V] exercicio 09
     - ler ano de nacimento de 7 pessoas
     - dizer quantos são maiores de 21 anos
 [] exercicio 010
