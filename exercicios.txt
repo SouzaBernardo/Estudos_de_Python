@@ -20,7 +20,7 @@ exercíicos for
 [V] exercicio 09
     - ler ano de nacimento de 7 pessoas
     - dizer quantos são maiores de 21 anos
-[] exercicio 010
+[V] exercicio 010
     - ler peso de 5 pessoas e dizer quel qual o maior e o menor
 [] exercicio 011
     - nome, idade e sexo => 4 pessoas
