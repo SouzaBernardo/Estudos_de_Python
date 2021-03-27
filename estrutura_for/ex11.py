@@ -7,13 +7,15 @@
 '''
 #média ok
 
-total_idade = 0
+soma_idades = 0
 media = 0
 for i in range(1, 5):
-    #nome = str(input('Digite o nome:'))
+    nome = str(input('Digite o nome:'))
     idade = int(input('Digite a idade:'))
+    if i == 1:
+        mais_velho = nome, idade
     #sexo = str(input('Digite o sexo (M/F):'))
-    total_idade += idade
+    soma_idades += idade
     
-media = total_idade / 4
+media = soma_idades / 4
 print(f'A media das idades foi: {media}')
