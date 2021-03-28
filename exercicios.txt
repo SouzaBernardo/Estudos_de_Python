@@ -22,7 +22,7 @@ exercíicos for
     - dizer quantos são maiores de 21 anos
 [V] exercicio 010
     - ler peso de 5 pessoas e dizer quel qual o maior e o menor
-[] exercicio 011
+[+/-] exercicio 011
     - nome, idade e sexo => 4 pessoas
     ## mostrar
         -media da idade 
