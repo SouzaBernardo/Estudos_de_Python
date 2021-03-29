@@ -3,7 +3,8 @@ frase = str(input('Digite sua frase:')).upper().strip()
 
 quantas_vezes_tem_a = frase.count('A')
 encontrar_a = frase.find('A') + 1
-ultimo_a = frase.rfind('A') + 1 # Problema com acentuação
+ultimo_a = frase.rfind('A') + 1 # procurar pela direita
+# r == rigth
 
 print('-=' * 28)
 print(f'A frase contém \033[33m{quantas_vezes_tem_a}\033[m letra(s) \033[33ma / as\033[m.')
