@@ -1,0 +1,22 @@
+Exercícios while:
+1º Exercícios:
+    [] - Exercício 01
+        - ler o sexo, aceitar M ou F = digitar novamente
+    [] - Exercício 02
+        - pensar um número e dizer quando o usuário acertou, e dizer a quantidade de palpites dados
+    [] - Exercício 03
+        - ler dois valores
+        - MENU: ler dois valores, 1- soma, 2- multplicar, 3- maior, 4- novos números, 5- sair
+    [] - Exercício 04
+        - pede um número e mostra o fatorial, exemplo: 5! = 5x4x3x2x1 = 120 (while e for)
+    [] - Exercício 05
+        - ler o primeiro termo e a razão da pa, e mostrar os 10 primeiros termos
+    [] - Exercício 06
+        - ex05 com mais termos, perguntar quantos. Acaba com zero
+    [] - Exercício 07
+        - pedir um número n e mostrar n primeiros da sequência de fibonacci
+    [] - Exercício 08
+        - ler vários inteiros, ele só irá parar quando digitar 999. quantos numeros foram digitados e a sua soma (desconsiderar o flag[999])
+    [] - Exercício 09
+        - ler varios números inteiros. Ao fim mostrar a media entre todos os valores, qual foi o maior e qual foi o menor. perguntar se quer continuar ou nao.
+2º Exercícios:
