@@ -1,8 +1,8 @@
 Exercícios while:
 1º Exercícios:
-    [] - Exercício 01
+    [x] - Exercício 01
         - ler o sexo, aceitar M ou F = digitar novamente
-    [] - Exercício 02
+    [x] - Exercício 02
         - pensar um número e dizer quando o usuário acertou, e dizer a quantidade de palpites dados
     [] - Exercício 03
         - ler dois valores
