@@ -4,7 +4,7 @@ Exercícios while:
         - ler o sexo, aceitar M ou F = digitar novamente
     [x] - Exercício 02
         - pensar um número e dizer quando o usuário acertou, e dizer a quantidade de palpites dados
-    [] - Exercício 03
+    [x] - Exercício 03
         - ler dois valores
         - MENU: ler dois valores, 1- soma, 2- multplicar, 3- maior, 4- novos números, 5- sair
     [] - Exercício 04
