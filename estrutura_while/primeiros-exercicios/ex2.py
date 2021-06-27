@@ -22,7 +22,8 @@ def main():
         else:
             palpites += 1
 
-    print(f'Parabéns!!! Você acertou com {palpites} tentativas, o número era {num}.')
+    print(
+        f'Parabéns!!! Você acertou com {palpites} tentativas, o número era {num}.')
 
 
 if __name__ == '__main__':
