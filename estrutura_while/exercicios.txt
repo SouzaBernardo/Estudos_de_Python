@@ -7,7 +7,7 @@ Exercícios while:
     [x] - Exercício 03
         - ler dois valores
         - MENU: ler dois valores, 1- soma, 2- multplicar, 3- maior, 4- novos números, 5- sair
-    [] - Exercício 04
+    [x] - Exercício 04
         - pede um número e mostra o fatorial, exemplo: 5! = 5x4x3x2x1 = 120 (while e for)
     [] - Exercício 05
         - ler o primeiro termo e a razão da pa, e mostrar os 10 primeiros termos
